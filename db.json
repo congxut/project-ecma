@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 6,
+      "name": "Sản phẩm 7 updated",
+      "price": "12313123444444444"
+    },
+    {
+      "name": "Sản phẩm chính",
+      "price": "32423",
+      "id": 7
+    },
+    {
+      "name": "Sản phẩm 100",
+      "price": "32432",
+      "id": 8
+    },
+    {
+      "name": "sfds",
+      "price": "sdf",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "á đùrtertsadfsad",
+      "price": "4234f"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "projects 1",
+      "iamge": "https://images.unsplash.com/photo-1682685795579-37e731bfefab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+      "content": "projects 1"
+    },
+    {
+      "id": 2,
+      "name": "projects 2",
+      "iamge": "https://plus.unsplash.com/premium_photo-1674939149224-a4d29cca2b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+      "content": "projects 2"
+    },
+    {
+      "id": 2,
+      "name": "projects 2",
+      "iamge": "https://images.unsplash.com/photo-1686485188236-1d79ee4d398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
+      "content": "projects 3"
+    }
+  ]
+}
