@@ -1,20 +1,20 @@
-import instance from "./config";
+import instance from "./instance";
 
 const getProducts = () => {
-    return instance.get("/products");
+  return instance.get("/products");
 };
 
 const getProduct = (id) => {
-    return instance.get(`/products/${id}`);
+  return instance.get(`/products/${id}`);
 };
 const addProduct = (product) => {
-    return instance.post(`/products`, product);
+  return instance.post(`/products`, product);
 };
 const updateProduct = (product) => {
-    return instance.put(`/products/${product.id}`, product);
+  return instance.put(`/products/${product.id}`, product);
 };
 const deleteProduct = (id) => {
-    return instance.delete(`/products/${id}`);
+  return instance.delete(`/products/${id}`);
 };
 
 export { getProducts, getProduct, addProduct, updateProduct, deleteProduct };

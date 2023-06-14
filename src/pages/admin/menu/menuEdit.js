@@ -1,7 +1,7 @@
-const menuEdit = () => {
+const MenuEdit = () => {
   return /*html */ `
     
   `;
 };
 
-export default menuEdit;
+export default MenuEdit;

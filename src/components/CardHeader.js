@@ -11,7 +11,7 @@ const CardHeader = () => {
         alt="about avatar"
       />
       <h3 class="mt-6 mb-1 text-5xl font-semibold">
-        Nguyen Cong Xut
+        Nguyen Cong Xuat
       </h3>
       <p class="mb-4 text-[#7B7B7B]">Web Developer</p>
       <!-- social link and social  buttons -->
@@ -58,13 +58,15 @@ const CardHeader = () => {
         </a>
       </div>
       <!-- dowanload button -->
+      <a id="download-link" href="https://example.com/mydocument.pdf">
       <button class="dowanload-btn">
-        <img
-          src="https://bostamihtml.ibthemespro.com/images/icons/dowanload.png"
-          alt="icon"
-          class="mr-2"
-        />Download CV
-      </button>
+          <img
+            src="https://bostamihtml.ibthemespro.com/images/icons/dowanload.png"
+            alt="icon"
+            class="mr-2"
+          />Download CV
+          </button>
+        </a>
     </div>
   `;
 };

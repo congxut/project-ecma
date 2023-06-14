@@ -2,11 +2,13 @@ import Header from "@/components/Header";
 
 const AboutPage = () => {
   return /*html */ `
-    ${Header()}
+  <div class="bg-homeBg z-50 min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+  <div class="container">
+  ${Header()}
       <div
         class="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20"
       >
-        <div data-aos="fade" class="aos-init aos-animate">
+        <div class="aos-init aos-animate md:px-20">
           <div class="py-12">
             <!-- about page title -->
             <h2 class="after-effect after:left-52 mt-12 lg:mt-0">About Me</h2>
@@ -17,7 +19,7 @@ const AboutPage = () => {
                 <!-- about me image -->
                 <img
                   class="w-full md:w-[330px] md:h-[400px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
-                  src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/320331952_836082691002509_5558691899322755623_n.jpg?stp=dst-jpg_s320x320&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=Ab-wQYKB8LwAX-_Q4od&_nc_ht=scontent.fhan14-3.fna&oh=00_AfDIfYVy7WQBAoPNAAqbWv_kr3emtuXk4zYMDjz5a0xzUA&oe=648BD22B"
+                  src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/332577198_601695367985502_5771270881620518379_n.jpg?stp=dst-jpg_p240x240&_nc_cat=111&ccb=1-7&_nc_sid=6d9402&_nc_ohc=Ez3NgDVnUzwAX92BGSx&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfD5NONnu1DUMv9TerNuiNAeJfnwfdqghtrBC5GQAWaFyA&oe=648CF02B"
                   alt="about image"
                 />
               </div>
@@ -177,7 +179,7 @@ const AboutPage = () => {
                     >
                       <img
                         class="overflow-hidden brand-img"
-                        src="https://bostamihtml.ibthemespro.com/images/slider/brand4.png"
+                        src=""
                         alt="brand"
                       />
                     </div>
@@ -191,7 +193,7 @@ const AboutPage = () => {
                     >
                       <img
                         class="overflow-hidden brand-img"
-                        src="https://bostamihtml.ibthemespro.com/images/slider/brand2.png"
+                        src=""
                         alt="brand"
                       />
                     </div>
@@ -205,7 +207,7 @@ const AboutPage = () => {
                     >
                       <img
                         class="overflow-hidden brand-img"
-                        src="https://bostamihtml.ibthemespro.com/images/slider/brand1.png"
+                        src=""
                         alt="brand"
                       />
                     </div>
@@ -219,7 +221,7 @@ const AboutPage = () => {
                     >
                       <img
                         class="overflow-hidden brand-img"
-                        src="https://bostamihtml.ibthemespro.com/images/slider/brand.png"
+                        src=""
                         alt="brand"
                       />
                     </div>
@@ -241,6 +243,8 @@ const AboutPage = () => {
           </footer>
           <!-- footer section end -->
         </div>
+      </div>
+      </div>
       </div>
     `;
 };

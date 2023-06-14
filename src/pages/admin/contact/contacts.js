@@ -1,6 +1,6 @@
-const contacts = () => {
+const Contacts = () => {
   return /*html */ `
   `;
 };
 
-export default contacts;
+export default Contacts;

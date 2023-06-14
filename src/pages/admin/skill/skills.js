@@ -1,6 +1,5 @@
-
 const skills = () => {
-  return /*html */``
-}
+  return /*html */ ``;
+};
 
-export default skills
+export default skills;

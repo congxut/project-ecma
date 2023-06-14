@@ -1,19 +1,18 @@
 import instance from "./instance";
 
-const getAll = () => {
+const getPosts = () => {
   return instance.get("/posts");
 };
-const getOne = (id) => {
+const getPost = (id) => {
   return instance.get(`/posts/${id}`);
 };
-const remove = (id) => {
+const deletePost = (id) => {
   return instance.delete(`/posts/${id}`);
 };
-const add = (post) => {
+const addPost = (post) => {
   return instance.post(`/posts`, post);
 };
-const update = (post) => {
-  //{id: 1, title: 'abc'}
+const updatePost = (post) => {
   return instance.put(`/posts/${post.id}`, post);
 };
-export { getAll, remove, add, update };
+export { getPosts, deletePost, addPost, updatePost };

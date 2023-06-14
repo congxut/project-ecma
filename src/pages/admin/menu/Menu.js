@@ -1,15 +1,14 @@
-import { deleteProduct, getProducts } from "@/api/product";
+import { deletePost, getPosts } from "@/api/post";
 import { useEffect, useState } from "@/utilities";
 import axios from "axios";
 
-
-const AdminProductsPage = () => {
-  const [products, setProducts] = useState([]);
+const Posts = () => {
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
-        setProducts(await getProducts());
+        setPosts(await getPosts());
       } catch (error) {
         console.log(error);
       }
@@ -24,11 +23,9 @@ const AdminProductsPage = () => {
         const confirm = window.confirm("Bạn chắc chứ?");
         if (confirm) {
           try {
-            await deleteProduct(id);
-            const newProducts = products.filter(
-              (product) => product.id !== +id
-            );
-            setProducts(newProducts);
+            await deletePost(id);
+            const newPosts = posts.filter((post) => post.id !== +id);
+            setPosts(newPosts);
           } catch (error) {
             console.log(error);
           }
@@ -38,36 +35,35 @@ const AdminProductsPage = () => {
   });
   return /*html*/ `
     <div class="container">
-    <a href="/admin/products/add">Add product</a>
+    <a href="/admin/posts/add">Add product</a>
       <table class="table table-bordered">
         <thead>
           <tr>
             <th>STT</th>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Price</th>
-            <th>Description</th>
+            <th>Title</th>
+            <th>Img</th>
+            <th>Content</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          ${products
+          ${posts
             .map(
-              (product, index) => /*html */ `
+              (post, index) => /*html */ `
           <tr>
             <td>${index + 1}</td>
-            <td>${product.name}</td>
-            <td></td>
-            <td>${product.price}</td>
+            <td>${post.title}</td>
+            <td>${post.img}</td>
+            <td>${post.contetn}</td>
             <td></td>
             <td>
               <button
-                data-id="${product.id}"
+                data-id="${post.id}"
                 class="btn btn-danger btn-remove"
               >
                 Delete
               </button>
-              <a href="/admin/products/${product.id}/edit">Update</a>
+              <a href="/admin/posts/${post.id}/edit">Update</a>
             </td>
           </tr>
           `

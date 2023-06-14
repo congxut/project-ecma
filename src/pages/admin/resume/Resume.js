@@ -2,7 +2,6 @@ import { deleteProduct, getProducts } from "@/api/product";
 import { useEffect, useState } from "@/utilities";
 import axios from "axios";
 
-
 const AdminProductsPage = () => {
   const [products, setProducts] = useState([]);
 
@@ -43,9 +42,8 @@ const AdminProductsPage = () => {
         <thead>
           <tr>
             <th>STT</th>
-            <th>Name</th>
-            <th>Image</th>
-            <th>Price</th>
+            <th>Date</th>
+            <th>Tile</th>
             <th>Description</th>
             <th>Action</th>
           </tr>
@@ -79,4 +77,4 @@ const AdminProductsPage = () => {
     `;
 };
 
-export default AdminProductsPage;
+export default Resume;

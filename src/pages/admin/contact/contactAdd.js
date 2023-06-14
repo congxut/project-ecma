@@ -1,7 +1,7 @@
-const contactAdd = () => {
+const ContactAdd = () => {
   return /*html */ `
   
   `;
 };
 
-export default contactAdd;
+export default ContactAdd;

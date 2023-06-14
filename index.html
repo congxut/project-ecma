@@ -9,15 +9,7 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <!-- font -->
-    <!-- Thêm thư viện Font Awesome -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,13 +22,12 @@
     <link rel="stylesheet" href="./src/assets/css/custom.css" />
     <link rel="stylesheet" href="./src/assets/css/tailwind.css" />
 
-    <!-- <link rel="stylesheet" href="./src/assets/img/DM_20230607024709_001.jpg" /> -->
     <script
       src="https://kit.fontawesome.com/e123c1a84c.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      <!-- // // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    <!-- <script>
+       // // On page load or when changing themes, best to add inline in `head` to avoid FOUC
             if (
               localStorage.getItem("color-theme") === "dark" ||
               (!("color-theme" in localStorage) &&
@@ -45,11 +36,30 @@
               document.documentElement.classList.add("dark");
             } else {
               document.documentElement.classList.remove("dark");
-            } -->
+            } 
+    </script> -->
+    <script>
+      const downloadLink = document.getElementById("download-link");
+      downloadLink.addEventListener("click", function () {
+        const url = downloadLink.getAttribute("href");
+        const filename = url.substring(url.lastIndexOf("/") + 1);
+        fetch(url)
+          .then((response) => response.blob())
+          .then((blob) => {
+            const link = document.createElement("a");
+            link.href = window.URL.createObjectURL(blob);
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          });
+      });
+
+      
     </script>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="./src/main.js"></script>
-    
+  </body>
 </html>

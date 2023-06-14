@@ -1,7 +1,5 @@
 const skillEdit = () => {
-  return /*html */ `
-  
-  `;
+  return /*html */ `<div>skillEdit</div>`;
 };
 
 export default skillEdit;

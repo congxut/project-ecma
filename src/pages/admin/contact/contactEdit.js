@@ -1,6 +1,6 @@
-const contactEdit = () => {
+const ContactEdit = () => {
   return /*html */ `
   `;
 };
 
-export default contactEdit;
+export default ContactEdit;

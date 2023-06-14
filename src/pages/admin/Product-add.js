@@ -1,7 +1,10 @@
 import { addProduct } from "@/api/product";
 import { useEffect, router } from "@/utilities";
+import { v4 as uuidv4 } from "uuid";
 
 const AdminProductAddPage = () => {
+  const products = JSON.parse(localStorage.getItem("products")) || [];
+
   useEffect(() => {
     const form = document.getElementById("form-add");
     const productName = document.getElementById("product-name");

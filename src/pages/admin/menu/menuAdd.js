@@ -1,6 +1,6 @@
-const menuAdd = () => {
+const MenuAdd = () => {
   return /*html */ `
   `;
 };
 
-export default menuAdd;
+export default MenuAdd;

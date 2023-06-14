@@ -30,20 +30,66 @@
     {
       "id": 1,
       "name": "projects 1",
-      "iamge": "https://images.unsplash.com/photo-1682685795579-37e731bfefab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      "content": "projects 1"
+      "img": "https://picsum.photos/400/400",
+      "categoryProjectId": "1"
     },
     {
       "id": 2,
       "name": "projects 2",
-      "iamge": "https://plus.unsplash.com/premium_photo-1674939149224-a4d29cca2b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      "content": "projects 2"
+      "img": "https://picsum.photos/400/400",
+      "categoryProjectId": "2"
+    },
+    {
+      "id": 3,
+      "name": "projects 2",
+      "img": "https://picsum.photos/400/400",
+      "categoryProjectId": "2"
+    },
+    {
+      "id": 4,
+      "name": "projects 3",
+      "img": "https://picsum.photos/400/400",
+      "categoryProjectId": "2"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "name": "projects 1"
     },
     {
       "id": 2,
-      "name": "projects 2",
-      "iamge": "https://images.unsplash.com/photo-1686485188236-1d79ee4d398c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60",
-      "content": "projects 3"
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "id": 3,
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "id": 4,
+      "name": "Resume",
+      "url": "/resume"
+    },
+    {
+      "id": 5,
+      "name": "Blog",
+      "url": "/posts"
+    },
+    {
+      "id": 6,
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "date": "",
+      "title": "Dự án mẫu",
+      "iamge": "https://bostamihtml.ibthemespro.com/images/blog_images/small/1.jpg",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui odio quae neque beatae ipsum enim id facere provident "
     }
   ]
 }

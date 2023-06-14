@@ -1,56 +1,52 @@
-const PostDetail = () => {
+import Header from "@/components/Header";
+import { posts } from "../../data";
+
+const PostDetail = ({ id }) => {
+  // const externalLink = document.getElementById("external-link");
+  // externalLink.addEventListener("click", function (event) {
+  //   event.preventDefault();
+  //   const url = externalLink.getAttribute("href");
+  //   window.location.assign(url);
+  // });
+
+  const post = posts.find((post) => post.id === +id);
+  console.log("post", post);
+  if (!post) return null;
+
   return /*html */ `
-    <div class="jquery-modal blocker current">
-      <div id="ex1" class="modal-container modal" style="display: inline-block">
+   <div class="bg-homeBg z-50 min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+    <div class="container">
+      ${Header()}
+    <div class="blocker current bg-white">
+      <div id="ex1" class="container">
         <div
-          class="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]"
+          class="pt-6 rounded-full"
         >
-          <div class="pr-3 pb-2">
+          <div class="pr-6 pb-2">
             <img
-              class="w-full md:h-[450px] object-cover rounded-xl mt-6"
-              src="./images/blog_images/1.jpg"
+              class="w-full md:h-[450px] object-cover rounded-xl pt-6 rounded-full"
+              src="${post.img}"
               alt="blog image"
             />
-            <div class="flex mt-4 text-tiny text-black dark:text-white">
+            <div class="flex mt-4 text-tiny text-black">
               <span>177 April</span>
               <span class="dot-icon">Inspiration</span>
             </div>
-            <h2 class="dark:text-white sm:text-3xl mt-2 font-medium">
-              How to Own Your Audience by Creating an Email List.
+            <h2 class=" sm:text-3xl mt-2 font-medium">
+              ${post.title}
             </h2>
-            <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-              consequatur delectus porro sapiente molestias, magni quasi sed,
-              enim corporis omnis doloremque soluta inventore dolorum conseqr
-              quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Fuga consequatur delectus porro
-              sapiente molestias, magni quasi sed, enim corporis omnis
-              doloremque soluta inventore dolorum consequuntur quo obcaecati
-              rerum sit non.
+            <p class=" font-normal text-[15px] sm:text-sm my-4">
+              ${post.content}
             </p>
-            <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-              consequatur delectus porro sapiente molestias, magni quasi sed,
-              enim corporis omnis doloremque soluta inventore dolorum consetur
-              quo obcaecati rerum sit non. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Fuga consequatur delectus porro
-              sapiente molestias, magni quasi sed, sit amet consectetur
-              adipisicing elit. Fuga consequatur delectus porro sapiente
-              molestias, magni quasi sed, enim corporis omnis doloremque soluta
-              inventore dolorum consequuntur.
-            </p>
-            <p class="dark:text-white font-normal text-[15px] sm:text-sm my-4">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
-              consequatur delectus porro sapiente molestias, magni quasi sed,
-              enim corporis omnis doloremque soluta inventore dolorum
-              consequuntur quo obcaecati rerum sit non.
+            <p class=" font-normal text-[15px] sm:text-sm my-4">
+              <a id="external-link" href="${post.link}">link github</a>
             </p>
           </div>
 
           <div
             class="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3"
           >
-            <div class="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+            <div class=" bg-[#ffffff] flex p-4 rounded-lg">
               <div>
                 <img
                   class="md:w-[125px] rounded-xl"
@@ -60,18 +56,18 @@ const PostDetail = () => {
               </div>
               <div class="pl-5">
                 <div class="flex justify-between items-center">
-                  <h3 class="dark:text-white text-[22px] font-medium">
+                  <h3 class=" text-[22px] font-medium">
                     Rafia Ana
                   </h3>
-                  <span class="dark:text-[#dedede] text-tiny">15 min ago</span>
+                  <span class=" text-tiny">15 min ago</span>
                 </div>
-                <p class="dark:text-white md:pr-16">
+                <p class=" md:pr-16">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Sequi nam ad, unde vel aut soluta atque consequatur. Omnis,
                   debitis nihil?
                 </p>
                 <button
-                  class="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]"
+                  class=" text-tiny hover:text-[#FA5252] "
                 >
                   Reply
                 </button>
@@ -80,7 +76,7 @@ const PostDetail = () => {
           </div>
 
           <div class="flex items-center md:justify-end space-x-4 mt-8 mr-3">
-            <h6 class="dark:text-white text-[20px]">Login with:</h6>
+            <h6 class=" text-[20px]">Login with:</h6>
             <div class="flex space-x-3">
               <a
                 href="https://www.facebook.com/"
@@ -125,11 +121,11 @@ const PostDetail = () => {
             <div class="pr-3 pb-4">
               <form class="w-full">
                 <label class="block mb-2">
-                  <span class="dark:text-white text-[25px] font-medium"
+                  <span class=" text-[25px] font-medium"
                     >Leave a Reply</span
                   >
                   <textarea
-                    class="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
+                    class="block w-full mt-3 p-3  hover:outline-none hover:border-0 focus:outline-none rounded bg-gray"
                     rows="3"
                   ></textarea>
                 </label>
@@ -138,20 +134,9 @@ const PostDetail = () => {
             </div>
           </div>
         </div>
-        <a
-          href="#close-modal"
-          rel="modal:close"
-          class="close bg-close-light dark:bg-close-dark"
-          >Close</a
-        >
-        <a
-          href="#close-modal"
-          rel="modal:close"
-          class="close bg-close-light dark:bg-close-dark"
-          >Close</a
-        >
-        <a href="#close-modal" rel="modal:close" class="close-modal">Close</a>
       </div>
+    </div>
+    </div>
     </div>
   `;
 };
